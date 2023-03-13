@@ -1,0 +1,14 @@
+connection-string:
+topic-name:
+subscription-name:
+spring:
+  config:
+    import: application-local.yml
+  jms:
+    servicebus:
+      connection-string: ${connection-string}
+      pricing-tier: premium
+  profiles:
+#    active: SDK
+    active: JmsListener
+
