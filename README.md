@@ -25,7 +25,7 @@ subscription-name:
 ## Run application
 
 ### Receive message by SDK
-1. In application.yml, set **spring.profiles.active=SDK**.
+1. In application.yml, set `spring.profiles.active=SDK`.
 2. Start Application.
 3. Send a message to the created topic. Refs: [Send a message to a queue or topic](https://learn.microsoft.com/en-us/azure/service-bus-messaging/explorer#send-a-message-to-a-queue-or-topic).
 4. Wait for a while to make the message to be expired and put to dead-letter queue. Then the app can consume the message in dead-letter queue. The result can be validated by app log:
@@ -34,7 +34,7 @@ xxx.SdkReceiver            : Received message from dead-letter queue. Sequence #
 ```
 
 ### Receive message by @JmsListener
-Same as previous step, just change **spring.profiles.active** from **SDK** to **JmsListener** in application.yml. The result can be validated by app log:
+Same as previous step, just change `spring.profiles.active` from `SDK` to `JmsListener` in `application.yml`. The result can be validated by app log:
 ```text
 xxx.JmsListenerReceiver    : Received message from queue: topic-1/subscriptions/subscription-1/$deadletterqueue. body = xxx.
 ```
