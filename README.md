@@ -34,7 +34,7 @@ xxx.SdkReceiver            : Received message from dead-letter queue. Sequence #
 ```
 
 ### Receive message by @JmsListener
-Same as previous step, just change profile from **SDK** to **JmsListener**. The result can be validated by app log:
+Same as previous step, just change **spring.profiles.active** from **SDK** to **JmsListener** in application.yml. The result can be validated by app log:
 ```text
 xxx.JmsListenerReceiver    : Received message from queue: topic-1/subscriptions/subscription-1/$deadletterqueue. body = xxx.
 ```
